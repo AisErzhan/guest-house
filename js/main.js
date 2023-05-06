@@ -20,3 +20,11 @@ $('.owl-prev').click(function() {
     prodSlider.trigger('prev.owl.carousel', [300]);
 });
 });
+const footSubmit = () => {
+    const footSubmitBtn = document.getElementById('footer__email-btn')
+    footSubmitBtn.addEventListener('submit', (event) => {
+        event.preventDefault()
+    })
+
+}
+footSubmit()
