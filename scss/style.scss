@@ -1,0 +1,544 @@
+@import "./mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.orange-line {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -33px;
+    width: 42px;
+    height: 8px;
+    background: #e08631;
+  }
+}
+ul li {
+  list-style: none;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-6 {
+  width: 50%;
+}
+.header {
+  padding: 8px 0 18px;
+  position: absolute;
+  width: 100%;
+  background-color: #52503b;
+  color: #ffffff;
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__list {
+      display: flex;
+      gap: 24px;
+      &-link {
+        @include font(400, 15px, 20px);
+      }
+    }
+    &__btn {
+      @include font(400, 16px, 20px);
+      padding: 11px 18px;
+      background-color: #ffffff;
+      color: #52503b;
+      border-radius: 6px;
+      border: 2px solid transparent;
+      &:hover {
+        @include font(500, 16px, 20px);
+        color: #ffffff;
+        background-color: #52503b;
+        border: 2px solid #ffffff;
+      }
+    }
+  }
+}
+.home {
+  background-image: url(../img/home/bg.png);
+  background-size: cover;
+  padding: 248px 0 98px;
+  margin: 0 auto;
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    max-width: 1200px;
+    color: #ffffff;
+  }
+  &__title {
+    @include font(400, 48px, 53px);
+    margin-bottom: 34px;
+    &-img {
+      margin-bottom: 34px;
+    }
+  }
+  &__description {
+    @include font(400, 14px, 20px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 116px;
+  }
+}
+.description {
+  padding: 149px 0 89px;
+  background: #faf8f0;
+  &__row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    &::before {
+      top: -33px;
+    }
+  }
+  &__text {
+    @include font(400, 14px, 20px);
+    color: #333333;
+    max-width: 360px;
+  }
+  &__subtext {
+    @include font(400, 13px, 20px);
+    margin-bottom: 41px;
+    max-width: 343px;
+  }
+  &__btn {
+    display: inline-block;
+    padding: 11px 18px;
+    background: #52503b;
+    border-radius: 6px;
+    color: #ffffff;
+    border: 2px solid transparent;
+    &:hover {
+      @include font(500, 16px, 20px);
+      color: #52503b;
+      background-color: #ffffff;
+      border: 2px solid #52503b;
+    }
+  }
+}
+.title {
+  padding: 140px 0;
+  &__text {
+    @include font(700, 96px, 96px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #52503b;
+    &::before {
+      top: -32px;
+    }
+  }
+}
+.cover {
+  margin: 0 auto;
+  &__img {
+    width: 1900px;
+    height: 860px;
+  }
+}
+.rooms {
+  text-align: center;
+  padding: 138px 0 98px;
+  color: #52503b;
+  background-color: #faf8f0;
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &::before {
+      top: -30px;
+    }
+  }
+  &__title {
+    @include font(400, 32px, 36px);
+    margin-bottom: 14px;
+  }
+  &__subtitle {
+    @include font(400, 16px, 24px);
+    max-width: 554px;
+    margin-bottom: 30px;
+  }
+  &__row {
+    display: flex;
+    gap: 74px;
+  }
+  &__cols {
+    &-title {
+      @include font(400, 16px, 24px);
+      margin-top: 12px;
+    }
+    &-subtitle {
+      @include font(400, 14px, 20px);
+      max-width: 346px;
+    }
+  }
+}
+.terms {
+  padding: 138px 0 130px;
+  background-color: #ffffff;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &::before {
+      top: -30px;
+    }
+  }
+  &__title {
+    @include font(400, 32px, 36px);
+    color: #52503b;
+    margin-bottom: 14px;
+  }
+  &__subtitle {
+    @include font(400, 16px, 24px);
+    color: #52503b;
+    max-width: 554px;
+    margin-bottom: 30px;
+  }
+  &__flex {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 42px;
+  }
+  &__item {
+    &-title {
+      @include font(400, 14px, 20px);
+      color: #52503b;
+    }
+    &-subtitle {
+      @include font(400, 14px, 20px);
+      color: #333333;
+      max-width: 507px;
+    }
+    &-img {
+      height: 100%;
+    }
+  }
+  &__col {
+    &-last {
+      padding-top: 152px;
+      .terms__item:last-of-type {
+        margin-top: 62px;
+      }
+    }
+  }
+}
+.reviews {
+  padding: 138px 0 150px;
+  background-color: #faf8f0;
+  &__item {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: #52503b;
+    &::before {
+      top: -30px;
+    }
+  }
+  &__col {
+    max-width: 572px;
+  }
+  &__title {
+    @include font(400, 32px, 36px);
+    margin-bottom: 14px;
+  }
+  &__subtitle {
+    @include font(400, 16px, 24px);
+    margin-bottom: 30px;
+  }
+  &__row, .owl-carousel{
+    display: flex;
+    gap: 10px;
+  }
+  &__block {
+    background-color: #ffffff;
+    padding: 61px 47px 70px 31px;
+    color: #333333;
+    max-width: 584px;
+    border: 1px solid rgba(82, 80, 59, 0.1);
+    border-radius: 4px;
+    &-title {
+      @include font(400, 18px, 24px);
+      position: relative;
+      margin-bottom: 11px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 90px;
+        top: -34px;
+        height: 18px;
+        background-image: url(../img/reviews/star.png);
+      }
+      &-last {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          top: -34px;
+          left: 72px;
+          background-image: url(../img/reviews/empty-star.png);
+          background-color: #ffffff;
+        }
+      }
+    }
+    &-subtitle {
+      @include font(400, 14px, 20px);
+      margin-bottom: 19px;
+    }
+    &-client {
+      @include font(400, 14px, 20px);
+      position: relative;
+      padding-left: 10px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 20px;
+        background-color: #e08631;
+        left: 0;
+      }
+    }
+  }
+}
+.bedroom {
+  margin: 0 auto;
+  &-img {
+    margin: 0 auto;
+    width: 1900px;
+    height: 860px;
+  }
+}
+.invite {
+  padding: 101px 0 130px;
+  margin: 0 auto;
+  &__row {
+    display: flex;
+  }
+  &__col {
+    color: #52503b;
+    padding-top: 37px;
+  }
+
+  &__title {
+    @include font(400, 32px, 36px);
+    position: relative;
+    margin-bottom: 14px;
+    &::before {
+      top: -30px;
+    }
+  }
+  &__subtitle {
+    @include font(400, 16px, 24px);
+  }
+  &__flex {
+    display: flex;
+    gap: 52px;
+  }
+  &__item {
+    display: flex;
+    gap: 19px;
+    margin-bottom: 59px;
+  }
+  &-img {
+    height: 100%;
+  }
+  &__text {
+    @include font(400, 14px, 20px);
+    color: #333333;
+    max-width: 203px;
+  }
+}
+.booking {
+  padding: 138px 0 100px;
+  background: #faf8f0;
+  &__item {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    color: #52503b;
+    max-width: 533px;
+    &::before {
+      top: -30px;
+    }
+  }
+  &__title {
+    @include font(400, 32px, 36px);
+    margin-bottom: 24px;
+  }
+  &__subtitle {
+    @include font(400, 16px, 24px);
+    margin-bottom: 18px;
+  }
+  &__btn {
+    display: inline-block;
+    @include font(400, 16px, 20px);
+    padding: 16px 26px;
+    background-color: #52503b;
+    color: #ffffff;
+    border-radius: 6px;
+    margin-right: 20px;
+    border: 2px solid transparent;
+    &:hover {
+      @include font(500, 16px, 20px);
+      color: #52503b;
+      background-color: #ffffff;
+      border: 2px solid #52503b;
+    }
+  }
+}
+.footer {
+  padding: 100px 0 110px;
+  background-color: #52503b;
+  &__row {
+    display: flex;
+  }
+  &__pages {
+    @include font(400, 14px, 20px);
+    color: #ffffff;
+    margin-bottom: 10px;
+    &-title {
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+  &-media {
+    @include font(400, 14px, 20px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  &__link {
+    display: flex;
+    gap: 27px;
+    &-list {
+      color: #ffffff;
+      font-size: 32px;
+      width: 100%;
+      height: 32px;
+      &-air {
+        &:hover {
+          color: #e08631;
+        }
+      }
+      &-facebook {
+        &:hover {
+          color: #3284bb;
+        }
+      }
+      &-instagram {
+        &:hover {
+          color: #ee32e5;
+        }
+      }
+    }
+  }
+  &__login {
+    color: #ffffff;
+    &-title {
+      @include font(400, 14px, 20px);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    &-subtitle {
+      @include font(400, 14px, 20px);
+      margin-bottom: 9px;
+      max-width: 563px;
+    }
+  }
+  &__email {
+    display: flex;
+    @include font(500, 14px, 20px);
+    width: 515px;
+    height: 52px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+    padding: 16px 0  16px 30px;
+    &::placeholder{
+      @include font(400, 14px, 20px);
+    }
+    &-btn{
+      position: relative;
+      @include font(400, 14px, 20px);
+      padding: 5px;
+      background-color: #52503b;
+      border-radius: 10px;
+      top: -36px;
+      right: -515px;
+      z-index: 1;
+      border: 2px solid transparent;
+      &:hover{
+        @include font(500, 14px, 20px);
+        border: 2px solid #52503b;
+        background-color: #ffffff;
+        color: #52503b;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        width: 90px;
+        height: 52px;
+        top: -12px;
+        left: -20px;
+        background-color: #ffffff;
+        z-index: -1;
+        border-radius: 10px;
+      }
+     
+    }
+
+  }
+  &__item{
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    &-img{
+      margin-top: 48px;
+      margin-bottom: 20px
+    }
+    &-title{
+      @include font(400, 14px, 20px);
+      margin-bottom: 20px
+    }
+    &-subtitle{
+      @include font(400, 14px, 20px);
+    }
+  }
+}
+.owl-nav{
+  position: absolute;
+  right: 30px;
+  bottom: -80px;
+  display: flex;
+  gap: 10px;
+}
+.owl-prev, .owl-next{
+ background-color: transparent;
+ border: 2px solid #52503b;
+ border-radius: 50%;
+ width: 60px;
+ height: 60px;
+}
